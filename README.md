@@ -4,6 +4,7 @@
 [![Status](https://img.shields.io/badge/Status-Pre--Alpha-orange)](https://github.com/gregmulvihill/mcp-manager)
 [![Tool Manager](https://img.shields.io/badge/Type-Tool%20Manager-green)](https://github.com/gregmulvihill/mcp-manager)
 [![License](https://img.shields.io/github/license/gregmulvihill/mcp-manager)](LICENSE)
+[![Protected Branch](https://img.shields.io/badge/Main%20Branch-Protected-informational)](https://github.com/gregmulvihill/mcp-manager)
 
 A meta-tool for monitoring, maintaining, and managing Claude Desktop MCP servers.
 
@@ -88,6 +89,19 @@ Access the dashboard at http://localhost:8080 after starting the service.
 ## Development
 
 This project is in pre-alpha status and actively seeking contributions. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+### Branch Protection
+
+The main branch is protected and requires pull requests with at least one approval before merging. This ensures code quality and proper review of all changes.
+
+### Development Workflow
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request for review
+5. Address any feedback
+6. Your changes will be merged after approval
 
 ### Development Environment
 
