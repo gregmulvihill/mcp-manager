@@ -1,5 +1,10 @@
 # MCP Manager
 
+[![CogentEcho.ai](https://img.shields.io/badge/CogentEcho.ai-Ecosystem-blue)](https://github.com/topics/cogentecho-ai)
+[![Status](https://img.shields.io/badge/Status-Pre--Alpha-orange)](https://github.com/gregmulvihill/mcp-manager)
+[![Tool Manager](https://img.shields.io/badge/Type-Tool%20Manager-green)](https://github.com/gregmulvihill/mcp-manager)
+[![License](https://img.shields.io/github/license/gregmulvihill/mcp-manager)](LICENSE)
+
 A meta-tool for monitoring, maintaining, and managing Claude Desktop MCP servers.
 
 **Status**: Pre-alpha - conceptual architecture established, not yet implemented or tested.
