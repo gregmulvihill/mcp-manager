@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  mcp-manager:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: mcp-manager
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    volumes:
+      - ${CLAUDE_CONFIG_DIR:-~/.config/claude}:/app/claude-config:ro
+      - ${CLAUDE_LOGS_DIR:-~/.config/claude/logs}:/app/claude-logs:ro
+      - ./knowledge-base:/app/knowledge-base
+      - ./config:/app/config
+    environment:
+      - NODE_ENV=production
+      - LOG_LEVEL=info
+      - CLAUDE_DESKTOP_PATH=${CLAUDE_CONFIG_DIR:-~/.config/claude}
+      - DASHBOARD_PORT=8080
+
+  mcp-manager-db:
+    image: redis:alpine
+    container_name: mcp-manager-db
+    restart: unless-stopped
+    volumes:
+      - mcp-manager-data:/data
+    command: redis-server --appendonly yes
+    ports:
+      - "6378:6379"
+
+volumes:
+  mcp-manager-data:
